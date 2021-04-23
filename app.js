@@ -145,6 +145,9 @@ app.post('/mapInfo', (req,res)=>{
     let variantSize = req.body.variantSize;
     let width=req.body.canvasWidth;
     let height=req.body.canvasHeight;
+    let browserWidth=req.body.browserWidth;
+    let browserHeight=req.body.browserHeight;
+    let browserIP=req.body.borwserIP;
 
     let variant = variantSize + "," + variantColor;
 
