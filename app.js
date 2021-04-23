@@ -148,6 +148,7 @@ app.post('/mapInfo', (req,res)=>{
     let browserWidth=req.body.browserWidth;
     let browserHeight=req.body.browserHeight;
     let browserIP=req.body.browserIP;
+    let price=req.body.price;
 
     let variant = variantSize + "," + variantColor;
 
@@ -165,7 +166,8 @@ app.post('/mapInfo', (req,res)=>{
         "height":`${height}`,
         "browserHeight":`${browserHeight}`,
         "browserIP":`${browserIP}`,
-        "browserWidth":`${browserWidth}`
+        "browserWidth":`${browserWidth}`,
+        "price":`${price}`
 
     });
 
