@@ -147,12 +147,12 @@ app.post('/mapInfo', (req,res)=>{
     let height=req.body.canvasHeight;
     let browserWidth=req.body.browserWidth;
     let browserHeight=req.body.browserHeight;
-    let browserIP=req.body.borwserIP;
+    let browserIP=req.body.browserIP;
 
     let variant = variantSize + "," + variantColor;
 
     let centerLatLng=[center.lat,center.lng]
-    // let centerLatLng=[1,1]
+   
 
     let map_details = JSON.stringify({
 
