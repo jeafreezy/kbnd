@@ -162,7 +162,10 @@ app.post('/mapInfo', (req,res)=>{
         "bearing":`${bearing}`,
         "pitch":`${pitch}`,
         "width":`${width}`,
-        "height":`${height}`
+        "height":`${height}`,
+        "browserHeight":`${browserHeight}`,
+        "browserIP":`${browserIP}`,
+        "browserWidth":`${browserWidth}`
 
     });
 
