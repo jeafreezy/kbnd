@@ -9,12 +9,12 @@ const Shopify = require('shopify-api-node');
 
 const shopify = new Shopify({
     shopName: 'kushion-studio',
-    apiKey: process.env.API_KEY,
-    password: process.env.PASSWORD,
+    apiKey: '2eeb102c9ef2f51efbed580c9697ec39',
+    password: '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',
     autoLimit: true,
 });
 
-// const PORT = 3000;
+const PORT = 3000;
 
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(cors());
@@ -35,7 +35,7 @@ const client = new Client({
     
     // port:5432,
 
-    // password:'2398'
+    // password:''
 
 
 });
@@ -143,6 +143,8 @@ app.post('/mapInfo', (req,res)=>{
     let time = req.body.time;
     let variantColor = req.body.variantColor;
     let variantSize = req.body.variantSize;
+    let width=req.body.canvasWidth;
+    let height=req.body.canvasHeight;
 
     let variant = variantSize + "," + variantColor;
 
@@ -155,7 +157,9 @@ app.post('/mapInfo', (req,res)=>{
         "zoom":`${zoom}`,
         "center":`${centerLatLng}`,
         "bearing":`${bearing}`,
-        "pitch":`${pitch}`
+        "pitch":`${pitch}`,
+        "width":`${width}`,
+        "height":`${height}`
 
     });
 
@@ -261,7 +265,7 @@ app.delete('/delete/:id',(req,res)=>{
 })
 
 app.listen(process.env.PORT|| PORT,()=>{
-    console.log(`Server running on port ${process.env.PORT}`)
-    // console.log(`Server running on port ${PORT}`)
+    // console.log(`Server running on port ${process.env.PORT}`)
+    console.log(`Server running on port ${PORT}`)
  
 });
