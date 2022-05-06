@@ -8,9 +8,9 @@ const Shopify = require('shopify-api-node');
 //Shopify client connection
 
 const shopify = new Shopify({
-    shopName: 'kushion-studio',
-    apiKey: '2eeb102c9ef2f51efbed580c9697ec39',
-    password: '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',
+    shopName: '',
+    apiKey: '',
+    password: '',
     autoLimit: true,
 });
 
